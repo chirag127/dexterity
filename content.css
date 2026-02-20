@@ -1,0 +1,44 @@
+.dexter-btn {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: #8b0000;
+  color: white;
+  border: 1px solid #4a0000;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999999;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(139, 0, 0, 0.8);
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+  user-select: none;
+}
+.dexter-btn:hover {
+  transform: scale(1.1);
+  background-color: #aa0000;
+}
+.dexter-btn.loading {
+  animation: pulse 1s infinite;
+  pointer-events: none;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(139, 0, 0, 0.8);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 1);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(139, 0, 0, 0.8);
+  }
+}

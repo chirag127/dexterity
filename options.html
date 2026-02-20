@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Dexter Settings</title>
+    <style>
+      body {
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #121212;
+        color: #e0e0e0;
+        padding: 20px;
+        width: 320px;
+        margin: 0;
+      }
+      h2 {
+        color: #d32f2f;
+        border-bottom: 1px solid #d32f2f;
+        padding-bottom: 5px;
+      }
+      p {
+        font-size: 12px;
+        color: #888;
+      }
+      label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+      select,
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        box-sizing: border-box;
+        background: #222;
+        color: white;
+        border: 1px solid #444;
+        border-radius: 4px;
+      }
+      button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 10px;
+        background-color: #d32f2f;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background-color: #b71c1c;
+      }
+      #status {
+        margin-top: 15px;
+        color: #4caf50;
+        font-size: 14px;
+        text-align: center;
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Dexter Configuration</h2>
+    <p>
+      Select your provider and insert your key to activate the blood spatter AI. Client-side
+      processing only. No traces.
+    </p>
+
+    <label for="provider">AI Provider:</label>
+    <select id="provider">
+      <option value="gemini">Google Gemini</option>
+      <option value="openai">OpenAI</option>
+      <option value="anthropic">Anthropic</option>
+    </select>
+
+    <label for="apiKey">API Key:</label>
+    <input type="password" id="apiKey" placeholder="Secret Key..." />
+
+    <button id="save">Save Configuration</button>
+    <div id="status"></div>
+
+    <script type="module" src="options.js"></script>
+  </body>
+</html>
